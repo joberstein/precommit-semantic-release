@@ -1,12 +1,11 @@
-os: osx
 language: node_js
 node_js: lts/*
 cache: yarn
 
 addons:
-  homebrew:
+  apt:
     packages:
-      - pre-commit
+      - python3
 
 env:
   global:
@@ -15,6 +14,7 @@ env:
 
 before_install:
   - yarn cache clean
+  - pip install pre-commit
   - pre-commit install
 
 script:
