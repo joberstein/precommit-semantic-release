@@ -1,0 +1,9 @@
+- id: semantic-release
+  name: semantic-release
+  description: Hook for running semantic-release
+  language: node
+  entry: semantic-release
+  pass_filenames: false
+  always_run: true
+  stages:
+    - manual
