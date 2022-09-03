@@ -1,0 +1,28 @@
+{
+  "name": "precommit-semantic-release",
+  "author": "joberstein",
+  "license": "MIT",
+  "version": "1.0.0",
+  "description": "A precommit hook to run the npm semantic-release package.",
+  "repository": "https://github.com/joberstein/precommit-semantic-release.git",
+  "homepage": "https://github.com/joberstein/precommit-semantic-release#readme",
+  "bin": {
+    "semantic-release": "./node_modules/semantic-release/bin/semantic-release.js"
+  },
+  "bugs": {
+    "url": "https://github.com/joberstein/precommit-semantic-release/issues"
+  },
+  "keywords": [
+    "precommit",
+    "semantic-release"
+  ],
+  "scripts": {
+    "release": "semantic-release"
+  },
+  "dependencies": {
+    "semantic-release": "^19.0.5"
+  },
+  "devDependencies": {
+    "@semantic-release/exec": "^6.0.3"
+  }
+}

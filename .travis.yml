@@ -1,0 +1,18 @@
+language: node_js
+node_js: lts/*
+cache: yarn
+
+before_install:
+  - yarn cache clean
+  - pre-commit install
+
+script:
+  - pre-commit run --hook-stage manual commitlint-travis
+
+deploy:
+  - provider: script
+    edge: true
+    script: yarn release
+    on:
+      branch: master
+
