@@ -2,6 +2,16 @@ language: node_js
 node_js: lts/*
 cache: yarn
 
+addons:
+  homebrew:
+    packages:
+      - pre-commit
+
+env:
+  global:
+    # GITHUB_TOKEN
+    secure: "DNsxMRszpnvrhgc2ofgIgh31mPZ8JmKThy4pUpOGZIaQ0Ua5eLgVISW+X0UoTjAVVYTX1u5zMkwTGr3O63g+7STCwJySBmSb/Pi4FVDWz4dglR7In3HM0EkpWnamMj27IEtlJ1/Rt9bvxTBxR/ycoKsNpfyWOWj8MR+TmCTrBpkalX1F3fA9QhPpxGfP63N7hRkgxIlX26EDfS9EGaM5FJ9nCzutAXrKRhiEOidexTEMphnfbTbpcs1hJnDGHXb7LhSxiYePEKIc80cHTV11ALTpfPrXCCNNXbQ2uLHBqI5zc8Tu9fX6iSl3bXb60WrOWQgwOinOm4ECvucaFNoSwUHWWhy7WMr27xiRvAYiZOzXRKUXvQ/zIdMLc2qoGHY6AEVhSzwY5d9zu/81y7+fZoa+exXDfd3QdDOqLY9UIwRDxvD2eTUm/F2CruP7OZdzc8HrYwSsrqIkgDEJD37iV0G5RlVBOBlp36lUf0Nr1WoAmoEopAzpNBe1N62NpLDcFip+FXVyWEn24yll2dyn8blHrZFLF18ZORAiNgQUIJPSDDsRuSHWqlIL7PR29Y8kZU0SOkHpIICK2ATcGDjORwKJSccsb4rqp6X5LF2oVMtrCFUWxg+cCw/nhnJGVzRa0MlD4cD+ktEiO3WkQWJYtsNy54utBOaQmEBcLDSCD2w="
+
 before_install:
   - yarn cache clean
   - pre-commit install
