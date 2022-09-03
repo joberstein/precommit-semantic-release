@@ -15,6 +15,7 @@ before_install:
 
 script:
   - pre-commit run --hook-stage manual commitlint-travis
+  - yarn release -db $TRAVIS_BRANCH
 
 deploy:
   - provider: script
