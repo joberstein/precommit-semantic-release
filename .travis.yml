@@ -16,7 +16,7 @@ env:
 
 before_install:
   - yarn cache clean
-  - pip install --upgrade pip
+  - pip3 install --upgrade pip
 
 install:
   - pip3 install pre-commit
