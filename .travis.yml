@@ -1,3 +1,4 @@
+dist: jammy
 language: node_js
 node_js: lts/*
 cache: yarn
@@ -6,8 +7,6 @@ addons:
   apt:
     update: true
     packages:
-      - build-essential
-      - python-pip
       - python3
 
 env:
