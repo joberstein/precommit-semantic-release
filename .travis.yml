@@ -15,8 +15,12 @@ env:
 
 before_install:
   - yarn cache clean
+  - pip install --upgrade pip
+
+install:
   - pip3 install pre-commit
   - pre-commit install
+  - yarn --frozen-lockfile
 
 script:
   - pre-commit run --hook-stage manual commitlint-travis
