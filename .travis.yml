@@ -18,7 +18,10 @@ before_install:
   - pre-commit install
 
 script:
-  - $TRAVIS_BRANCH != master && pre-commit run --hook-stage manual commitlint-travis
+  - >
+    if [ "$TRAVIS_BRANCH" != "master" ]; then 
+      pre-commit run --hook-stage manual commitlint-travis 
+    fi
   - yarn release -db $TRAVIS_BRANCH
 
 deploy:
