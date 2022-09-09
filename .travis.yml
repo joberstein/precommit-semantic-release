@@ -1,7 +1,11 @@
 dist: jammy
 language: node_js
 node_js: lts/*
-cache: yarn
+cache: 
+  yarn: true
+  directories:
+    - $HOME/.cache/pre-commit
+
 if: branch != tag
 
 env:
@@ -12,10 +16,9 @@ env:
 before_install:
   - pip install pre-commit
   - pre-commit install
-  - yarn cache clean
 
 script:
-  - pre-commit run --hook-stage manual commitlint-travis
+  - $TRAVIS_BRANCH != master && pre-commit run --hook-stage manual commitlint-travis
   - yarn release -db $TRAVIS_BRANCH
 
 deploy:
