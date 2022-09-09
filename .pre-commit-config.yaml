@@ -7,8 +7,8 @@ repos:
       stages:
         - prepare-commit-msg
       args:
-        - "--regex=issues\/\\d+"
-        - "--format={commit_msg}\n\nBranch: '{ticket}'."
+        - "--regex=#\\d+"
+        - "--format={commit_msg}\n\nCloses {ticket}"
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
     rev: v9.0.0
     hooks:
