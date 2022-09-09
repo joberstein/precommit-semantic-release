@@ -2,13 +2,6 @@
     "plugins": [
         "@semantic-release/commit-analyzer",
         "@semantic-release/release-notes-generator",
-        "@semantic-release/github",
-        { 
-            "@semantic-release/exec": [
-                {
-                    "analyzeCommitsCmd": "node verifyRelease.js ${lastRelease.gitHead} ${commits[0].hash}"
-                }
-            ]
-        }
+        "@semantic-release/github"
     ]
 }
