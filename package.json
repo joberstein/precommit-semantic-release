@@ -22,7 +22,5 @@
   "dependencies": {
     "semantic-release": "^19.0.5"
   },
-  "devDependencies": {
-    "@semantic-release/exec": "^6.0.3"
-  }
+  "devDependencies": {}
 }

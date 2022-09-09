@@ -2,6 +2,7 @@ dist: jammy
 language: node_js
 node_js: lts/*
 cache: yarn
+if: branch != tag
 
 env:
   global:
